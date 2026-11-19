@@ -24,5 +24,9 @@ brand:
     love: []   # URLs de vídeos que te encantan
     hate: []   # URLs de vídeos que no quieres parecerte
   face_and_voice:
-    use_my_face: recorded         # recorded | avatar | none
+    use_my_face: avatar           # recorded | avatar | none
+    avatar_mode: lite             # lite = avatar solo en gancho y CTA | full
+    base_footage: "assets/avatar/base.mp4"   # 2–3 min a cámara
+    voice_sample: "assets/avatar/voice.wav"  # ~1 min limpio
+    avatar_consent: false         # obligatorio antes de generar
     voice_clone_consent: false

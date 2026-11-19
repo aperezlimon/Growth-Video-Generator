@@ -23,6 +23,11 @@ skills:
     formats: [talking_head_recorded]
     status: candidate
     notes: "Cortar silencios, zoom dinámico, insertar B-roll"
+  - id: revideo-renderer
+    category: motion
+    type: local
+    status: candidate
+    notes: "Alternativa MIT a Remotion si se superan 3 personas (licencia Remotion)"
   - id: manim-explainer
     category: animation
     type: local
@@ -31,12 +36,13 @@ skills:
   - id: tts-voice-clone
     category: voice
     type: api_wrapper
-    provider: "ElevenLabs (u otro)"
+    provider: "Chatterbox (MIT, local) en MVP; ElevenLabs u otro en producción"
     status: candidate
   - id: avatar-clone
     category: avatar
     type: api_wrapper
-    provider: "HeyGen / Higgsfield (a comparar)"
+    provider: "MVP: open source (LongCat-Video-Avatar, daVinci-MagiHuman — verificar licencia) · Producción: HeyGen / Higgsfield"
+    modes: [lite, full]
     formats: [talking_head_avatar]
     status: candidate
   - id: generative-broll
@@ -57,6 +63,7 @@ skills:
     status: candidate
     notes: "Cada meme con licencia, fuente, riesgo y etiquetas de emoción"
 review_policy:
+  require_commercial_license: true
   every_days: 14
   under_review_if: { zero_usage_cycles: 2, below_percentile: 30, fatigue_drop_pct: 25 }
   replace_if_alternative_cost_ratio: 0.5

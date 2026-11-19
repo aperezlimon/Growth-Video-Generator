@@ -2,7 +2,7 @@
 name: publisher-analytics
 description: Publica las versiones aprobadas de forma escalonada y recoge métricas a 1h/24h/72h/7d para alimentar el aprendizaje.
 model: haiku
-tools: [instagram.publish, youtube.upload, linkedin.post, metrics.fetch, db.write, learnings.update]
+tools: [tiktok.publish, tiktok.display_metrics, instagram.publish, youtube.upload, linkedin.post, metrics.fetch, db.write, learnings.update]
 output_schema: ../schemas/performance_snapshot.schema.json
 ---
 # Reglas

@@ -1,6 +1,6 @@
 # Growth Video Generator
 
-Sistema de subagentes que, a partir de un prompt en un chat, investiga tendencias (Instagram, LinkedIn, YouTube · últimos 30 días), analiza formatos ganadores, escribe guiones de 15–60 s, aplica tu identidad de marca, edita vídeos con skills, evalúa calidad y viralidad, publica y mide — generando **≥10 versiones por idea** y siguiendo tu progreso hacia un objetivo en un dashboard.
+Sistema de subagentes que, a partir de un prompt en un chat, investiga tendencias de vídeo vertical (TikTok, Reels, Shorts, LinkedIn · últimos 30 días), analiza formatos ganadores, escribe guiones de 15–60 s, aplica tu identidad de marca, edita vídeos con skills, evalúa calidad y viralidad, publica y mide — generando **≥10 versiones por idea** y siguiendo tu progreso hacia un objetivo en un dashboard.
 
 ```
 Prompt → Trend Scout → Analista → Copywriter → Brand Guardian → Editor → Evaluador → Viral Oracle → Publisher & Analytics
@@ -20,6 +20,7 @@ Prompt → Trend Scout → Analista → Copywriter → Brand Guardian → Editor
 | 6 | [Datos y dashboard](docs/06-datos-y-dashboard.md) |
 | 7 | [Roadmap paso a paso](docs/07-roadmap-paso-a-paso.md) |
 | 8 | [Costes y riesgos](docs/08-costes-riesgos.md) |
+| 9 | [Decisiones tomadas y stack de 0 €](docs/09-decisiones-y-stack-0-euros.md) |
 
 PDF completo: [`docs/Growth-Video-Generator.pdf`](docs/Growth-Video-Generator.pdf) (regenerar con `node scripts/build_pdf.js`).
 

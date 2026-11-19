@@ -11,4 +11,5 @@ schedule: "0 9 */14 * *"
 3. Fatiga: caída ≥25 % vs. sus primeras semanas → alerta + propuesta de variación.
 4. Mercado: busca nuevas skills/herramientas por categoría → candidate.
 5. Coste: alternativa equivalente a ≤50 % del coste → propuesta.
-6. Genera informe; las altas/bajas requieren aprobación humana.
+6. Licencia: rechaza toda skill/modelo sin licencia comercial (NC o sin LICENSE).
+7. Genera informe; las altas/bajas requieren aprobación humana.

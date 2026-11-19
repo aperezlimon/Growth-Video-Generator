@@ -1,5 +1,7 @@
 # 7. Roadmap: qué hacer, paso a paso
 
+> Ajustado a las decisiones tomadas (SaaS, vertical, doble aprobación, avatar, 0 €): ver tabla 9.8.
+
 Principio: **validar el valor antes de automatizarlo todo.** Primero conseguir que el sistema produzca vídeos que funcionan (aunque publiques a mano); después automatizar publicación y aprendizaje.
 
 ## Fase 0 · Preparación (semana 1)
@@ -10,7 +12,8 @@ Principio: **validar el valor antes de automatizarlo todo.** Primero conseguir q
   - Instagram como cuenta **Business/Creator** vinculada a una página de Facebook; crear app en Meta for Developers.
   - Proyecto en Google Cloud con YouTube Data API v3 y YouTube Analytics API.
   - App en LinkedIn Developers (solicitar los productos de publicación).
-  - Claves: Anthropic API, Apify (o similar), ElevenLabs; Supabase; Cloudflare R2/S3.
+  - Cuenta de TikTok for Developers.
+  - Claves y cuentas gratuitas: Apify (crédito gratuito), Supabase (plan gratuito), Cloudflare R2. En la fase interna los agentes se ejecutan con tu suscripción de Claude Code (ver cap. 9).
 - [ ] **Baseline:** anota seguidores y vistas medias actuales por canal.
 - [ ] **Lista de referentes:** 20–30 cuentas del nicho (competidores y creadores que admiras) por plataforma.
 

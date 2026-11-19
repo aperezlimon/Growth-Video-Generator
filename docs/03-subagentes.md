@@ -22,7 +22,7 @@ Para cada agente: **misión, entradas, proceso, salidas, herramientas/skills, cr
 
 ## A1 · Trend Scout (buscador de tendencias)
 
-**Misión:** encontrar los vídeos cortos que mejor están funcionando **en los últimos 30 días** para el tema, la industria y el público objetivo, en Instagram, LinkedIn y YouTube.
+**Misión:** encontrar los vídeos cortos que mejor están funcionando **en los últimos 30 días** para el tema, la industria y el público objetivo, en TikTok, Instagram, YouTube y LinkedIn (solo formato vertical).
 
 - **Entradas:** tema, industria, target (rol, país, idioma), lista opcional de cuentas referentes y competidores, palabras clave negativas.
 - **Proceso:**
@@ -30,6 +30,7 @@ Para cada agente: **misión, entradas, proceso, salidas, herramientas/skills, cr
   2. **Recolección por canal** (ver cap. 5):
      - YouTube: API oficial `search.list` con `publishedAfter = hoy-30d`, `videoDuration=short`, + `videos.list` para métricas.
      - Instagram: proveedores de scraping de Reels por hashtag/cuenta + Graph API *Business Discovery* para cuentas concretas.
+     - TikTok: TikTok Creative Center (tendencias, hashtags, audios) + scraping de vídeos por keyword/cuenta.
      - LinkedIn: scraping de posts de vídeo por keyword/creadores + lista manual de creadores top del nicho.
   3. **Normalización:** cada vídeo → `vistas, likes, comentarios, compartidos, guardados (si hay), duración, fecha, seguidores de la cuenta`.
   4. **Detección de outliers:** lo importante no es lo más visto, sino lo que **rinde por encima de lo normal para esa cuenta**:
@@ -109,7 +110,7 @@ Para cada agente: **misión, entradas, proceso, salidas, herramientas/skills, cr
   1. **Selección de skill/pipeline** según el formato visual (ver tabla del cap. 4).
   2. **Assets:** genera voz (TTS con tu voz clonada), busca B-roll (librerías con licencia o generativo), selecciona memes de la biblioteca curada, genera imágenes/ilustraciones.
   3. **Montaje:** composición en Remotion (plantilla de marca) → subtítulos animados → música/SFX → render.
-  4. **Exportación multiformato:** 9:16 (Reels/Shorts), 1:1 o 4:5 (LinkedIn/feed), 16:9 si procede; miniatura/portada; archivo SRT.
+  4. **Exportación:** formato maestro único 9:16 1080×1920 (TikTok, Reels, Shorts, LinkedIn vertical); miniatura/portada; archivo SRT.
 - **Salidas:** `video_version.json` + archivos en storage (`mp4`, `srt`, `jpg`).
 - **Reglas técnicas:** 1080×1920, 30 fps, -14 LUFS de audio, zona segura para la UI de cada red (sin texto en el 15 % inferior/superior), subtítulos siempre.
 - **Métricas:** tiempo y coste de render, tasa de rechazo del Evaluador.

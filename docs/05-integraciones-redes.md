@@ -32,12 +32,20 @@ Hay que distinguir **dos usos muy diferentes**:
 | Publicar | **Posts API / Community Management API** (perfil personal y páginas) | Acceso a ciertos productos requiere aprobación de LinkedIn; empezar con publicación en perfil personal |
 | Medir | Analítica de posts (páginas; perfil personal con permisos limitados) | Si la API no da lo necesario: importación manual/CSV en el MVP |
 
+## 5.3b TikTok
+
+| Uso | API | Notas |
+|-----|-----|-------|
+| Tendencias | Sin API comercial de búsqueda (la Research API es académica) | TikTok Creative Center (web) + scraping + lista de referentes |
+| Publicar | **Content Posting API** | Sin auditoría: solo publicaciones privadas y máx. 5 usuarios/24 h. Auditoría obligatoria para el SaaS |
+| Medir | **Display API** | Vistas, likes, comentarios y compartidos de tus vídeos |
+
 ## 5.4 Estrategia por fases para no bloquearse
 
 | Fase | Tendencias | Publicación | Métricas |
 |------|------------|-------------|----------|
-| **MVP** | YouTube API + Apify (IG/LinkedIn) + lista manual de referentes | **Manual asistida**: el sistema prepara vídeo + caption + hashtags y tú publicas | YouTube Analytics API + Instagram Insights; LinkedIn manual |
-| **V1** | + caché y monitorización diaria de cuentas semilla | IG + YouTube automáticos con aprobación | Automático en las tres donde la API lo permita |
+| **MVP** | YouTube API + Apify (IG/TikTok/LinkedIn) + TikTok Creative Center + lista manual de referentes | **Manual asistida**: el sistema prepara vídeo + caption + hashtags y tú publicas | YouTube Analytics API + Instagram Insights + TikTok Display API; LinkedIn manual |
+| **V1** | + caché y monitorización diaria de cuentas semilla | IG + YouTube (+ TikTok tras auditoría) automáticos con aprobación | Automático en las cuatro donde la API lo permita |
 | **V2** | + señales de audio/plantillas en tendencia | Programación óptima por hora | Atribución de seguidores y modelo predictivo |
 
 Alternativa a valorar para publicar: **agregadores de publicación** (servicios tipo Ayrshare, Buffer API, etc.) que ya tienen las aprobaciones de las plataformas y simplifican mucho el MVP, a cambio de una cuota mensual.

@@ -24,7 +24,7 @@
    ▼                           ▼                     ▼
 ┌──────────────┐   ┌──────────────────────┐   ┌────────────────────────┐
 │ Fuentes de   │   │ Skills & render      │   │ APIs redes sociales    │
-│ tendencias   │   │ Remotion · FFmpeg ·  │   │ Instagram Graph ·      │
+│ tendencias   │   │ Remotion · FFmpeg ·  │   │ TikTok · IG Graph ·    │
 │ YouTube API ·│   │ TTS · Avatar · IA    │   │ YouTube Data/Analytics │
 │ Apify · manual│  │ generativa (Higgsf.) │   │ · LinkedIn             │
 └──────────────┘   └──────────────────────┘   └────────────────────────┘
@@ -78,7 +78,7 @@ Usuario: "Idea: por qué tu equipo comercial no usa el CRM.
  ⏸ APROBACIÓN HUMANA (opcional) de guiones
    ▼
 [A5] Editor ── elige skill por formato ── render
-   │   → video_versions[] (mp4 9:16, 1:1, 16:9 + subtítulos + miniatura)
+   │   → video_versions[] (mp4 9:16 maestro + subtítulos + miniatura)
    ▼
 [A6] Evaluador ── checklist QA ── ¿OK? ─no─► vuelve a A5 (máx. 2 reintentos)
    │ sí
@@ -104,7 +104,7 @@ Cada versión es una combinación de ejes. El Copywriter y el Orquestador eligen
 | **Formato visual** | Talking head (tu cara o avatar), slideshow con motion, kinetic typography, dibujo/whiteboard, animación 2D, documental (b-roll + VO), meme-mix, screen recording, split-screen/reacción |
 | **Gancho (0–3 s)** | Pregunta, afirmación provocadora, número, "deja de…", visual inesperado, POV, resultado primero |
 | **Duración** | 15 s, 30 s, 45 s, 60 s |
-| **Plataforma** | Reels/IG, Shorts/YouTube, LinkedIn vídeo (feed) |
+| **Plataforma** | TikTok, Reels/IG, Shorts/YouTube, LinkedIn vídeo vertical |
 | **CTA** | Seguir, comentar palabra clave, guardar, link en bio, DM |
 
 Ejemplo: `V3 = Mito × Meme-mix × "Deja de…" × 30 s × Reels × Comentar palabra`.
@@ -116,11 +116,11 @@ Regla de diversidad: ninguna pareja de versiones comparte más de 3 de los 6 eje
 | Capa | Recomendación | Por qué |
 |------|---------------|---------|
 | Frontend | **Next.js + TypeScript + Tailwind + shadcn/ui** | Chat, revisión de vídeos y dashboard en un solo proyecto |
-| Orquestación de agentes | **Claude Agent SDK (TypeScript)** | Subagentes, herramientas, skills y MCP de forma nativa |
+| Orquestación de agentes | **Claude Code** (fase interna, 0 €) → **Claude Agent SDK (TypeScript)** (SaaS) | Mismas definiciones de agentes; subagentes, skills y MCP nativos |
 | Jobs largos | **Trigger.dev** o **Inngest** (o BullMQ + Redis) | Renders y scraping duran minutos; necesitas colas con reintentos |
 | Render de vídeo | **Remotion** (vídeo como código React) + **FFmpeg** | Plantillas reutilizables de marca, render escalable (Remotion Lambda) |
-| Voz | ElevenLabs (clon de tu voz) | Calidad y clonación con consentimiento |
-| Avatar / tu cara | HeyGen, Higgsfield u otros (fase 2) | Formatos con presentador sin grabar cada vez |
+| Voz | Chatterbox (MIT, local) en MVP · ElevenLabs u otro en producción | Clonación con consentimiento; 0 € en MVP |
+| Avatar | Modelo open source en GPU gratuita (MVP) · HeyGen/Higgsfield u otros (producción) | Formato "avatar-lite": avatar en gancho y CTA (ver cap. 9) |
 | Vídeo generativo | Higgsfield, Kling, Veo, Runway… vía API (fase 2–3) | B-roll y escenas que no puedes grabar |
 | Transcripción | Whisper / Deepgram | Analizar vídeos de referencia y generar subtítulos |
 | Base de datos | **Supabase (Postgres + Auth + Storage)** + pgvector | Relacional + búsquedas por similitud de patrones |

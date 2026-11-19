@@ -1,4 +1,5 @@
 # Copia como campaign.yaml y rellena
+workspace: "ws_001"           # tenant: tú eres el primer cliente
 campaign:
   name: "Q1 – Autoridad en ventas B2B"
   industry: "SaaS B2B"
@@ -10,7 +11,7 @@ campaign:
     pains: ["el equipo no usa el CRM", "pipeline poco predecible"]
     desires: ["equipo autónomo", "previsiones fiables"]
     objections: ["no tengo tiempo", "ya lo hemos intentado"]
-  channels: [linkedin, instagram, youtube]
+  channels: [tiktok, instagram, youtube, linkedin]   # solo vertical 9:16
   goal:                      # North Star
     metric: followers        # followers | views | engagement_rate | leads
     channel: linkedin
@@ -24,9 +25,9 @@ campaign:
     versions_per_idea: 10
     max_posts_per_channel_per_day: 2
   budget:
-    monthly_eur: 300
-    max_cost_per_version_eur: 3
+    monthly_eur: 0             # MVP: stack gratuito (ver docs cap. 9)
+    max_cost_per_version_eur: 0
   autonomy:                  # manual = requiere tu aprobación
     scripts: manual
     render: auto
-    publish: manual
+    publish: manual          # publicación manual asistida hasta pasar auditorías

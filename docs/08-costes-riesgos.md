@@ -28,9 +28,13 @@
 | Fatiga de formato | Alta | Medio | Skill Curator + detección de caídas de rendimiento |
 | Costes descontrolados | Media | Medio | Presupuesto por campaña, alertas, routing barato |
 | Predicción de viralidad poco fiable | Alta (al inicio) | Bajo-Medio | Presentarla como prioridad relativa, calibrar con datos |
+| Licencias de modelos open source (avatar/TTS) incompatibles con uso comercial | Media | Alto | Solo MIT/Apache o equivalentes; verificación en cada alta de skill |
+| Auditorías de apps (Meta, TikTok, LinkedIn) lentas o denegadas | Media | Alto | Solicitarlas pronto; publicación manual asistida mientras tanto |
 | Uso de tu imagen/voz | Baja | Alto | Consentimiento, almacenamiento seguro, etiquetado IA |
 
-## 8.3 Decisiones abiertas (a tomar por ti)
+## 8.3 Decisiones (resueltas en el cap. 9)
+
+Respuestas: 1) SaaS para terceros con uso interno; 2) canales verticales (TikTok, Reels, Shorts, LinkedIn vertical); 3) aprobación de guiones y publicación; 4) avatar; 5) 0 € en el MVP. Preguntas originales:
 
 1. ¿Uso **personal** (tu marca) o **producto multi-cliente** desde el principio? → afecta a multi-tenant, auth y facturación.
 2. ¿Qué **canal es prioritario** para el North Star? (Recomendación: uno principal + dos secundarios).

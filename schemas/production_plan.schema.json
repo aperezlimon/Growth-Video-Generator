@@ -35,6 +35,7 @@
           "platform": {
             "type": "string",
             "enum": [
+              "tiktok",
               "instagram",
               "youtube",
               "linkedin"

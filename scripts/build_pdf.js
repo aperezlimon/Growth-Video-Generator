@@ -9,8 +9,8 @@ const body = execFileSync('pandoc', ['-f', 'gfm', '-t', 'html5', ...docs], { enc
 const today = new Date().toLocaleDateString('es-ES');
 const cover = `<section class="cover"><div class="kicker">Documento de arquitectura y plan de ejecución</div>
 <div class="title">Growth Video Generator</div>
-<p class="subtitle">Sistema de subagentes para crear, evaluar, publicar y medir vídeo corto a escala en Instagram, LinkedIn y YouTube</p>
-<p class="meta">Versión 1.0 · ${today}</p></section>`;
+<p class="subtitle">Sistema de subagentes para crear, evaluar, publicar y medir vídeo corto vertical a escala en TikTok, Instagram, YouTube y LinkedIn</p>
+<p class="meta">Versión 1.1 · ${today}</p></section>`;
 const toc = '<section class="toc"><h2>Índice</h2><ol>' + docs.map(d =>
   `<li>${fs.readFileSync(d, 'utf8').split('\n')[0].replace(/^#\s*\d+\.\s*/, '')}</li>`).join('') + '</ol></section>';
 const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><style>${css}</style></head><body>${cover}${toc}<main>${body}</main></body></html>`;

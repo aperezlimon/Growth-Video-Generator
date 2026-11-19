@@ -4,7 +4,7 @@
 
 **Growth Video Generator (GVG)** es una aplicación con una interfaz de chat donde, a partir de un único prompt ("quiero hablar de X para la industria Y, dirigido al público Z"), se activa una **cadena de subagentes especializados** que:
 
-1. Investigan qué formatos de vídeo corto están funcionando **en los últimos 30 días** en Instagram, LinkedIn y YouTube para ese tema, industria y público objetivo.
+1. Investigan qué formatos de vídeo corto están funcionando **en los últimos 30 días** en TikTok, Instagram (Reels), YouTube (Shorts) y LinkedIn (vídeo vertical) para ese tema, industria y público objetivo.
 2. Analizan esos vídeos (formato, ritmo, tipografía, gráficos, duración, estructura narrativa, recursos de copy, ángulos de venta, ganchos de engagement).
 3. Escriben guiones de 15–60 segundos.
 4. Los pasan por un filtro de identidad de marca.

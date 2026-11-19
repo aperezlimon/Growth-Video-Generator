@@ -23,7 +23,8 @@ Tres tipos:
 | **Animación 2D / explainer** | Remotion + Lottie, o Manim para conceptos/diagramas animados | € – €€ |
 | **Documental** (B-roll + voz en off) | Stock con licencia (Pexels/Storyblocks…) o B-roll generativo (Higgsfield/Kling/Veo) + VO + subtítulos | €€ – €€€ |
 | **Talking head con tu cara (grabado)** | Tú grabas en bruto → skill de auto-edición: cortes de silencios, zoom dinámico, subtítulos, B-roll insertado | € |
-| **Talking head con avatar/clon** | HeyGen / Higgsfield / similar (con tu consentimiento) + plantilla de marca encima | €€€ |
+| **Avatar-lite** (avatar en gancho + CTA, resto motion) | Modelo open source de avatar + Chatterbox TTS + plantilla Remotion | € (GPU) |
+| **Talking head con avatar/clon completo** | HeyGen / Higgsfield / similar (con tu consentimiento) + plantilla de marca encima | €€€ |
 | **Meme-mix (comedia)** | Biblioteca de memes curada + plantillas re-creadas + SFX + cortes rápidos en Remotion | € |
 | **Screen recording / demo** | Grabación + zoom automático + cursor resaltado + subtítulos | € |
 | **Split-screen / reacción** | Composición Remotion con vídeo de referencia (con permiso) o recreado | € – €€ |

@@ -1,8 +1,8 @@
 ---
 name: trend-scout
-description: Busca los vídeos cortos con mejor rendimiento de los últimos 30 días en Instagram, LinkedIn y YouTube para un tema, industria y target.
+description: Busca los vídeos cortos con mejor rendimiento de los últimos 30 días en TikTok, Instagram, YouTube y LinkedIn (formato vertical) para un tema, industria y target.
 model: sonnet
-tools: [youtube.search, youtube.videos, apify.run_actor, instagram.business_discovery, references.list, WebSearch]
+tools: [tiktok.creative_center, youtube.search, youtube.videos, apify.run_actor, instagram.business_discovery, references.list, WebSearch]
 output_schema: ../schemas/trend_brief.schema.json
 ---
 # Rol

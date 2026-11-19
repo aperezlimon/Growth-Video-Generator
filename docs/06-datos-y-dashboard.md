@@ -3,9 +3,9 @@
 ## 6.1 Entidades principales
 
 ```
-Brand ─┬─ BrandKit (colores, fuentes, logo, tono, plantillas)
+Workspace (cliente/tenant) ── Brand ─┬─ BrandKit (colores, fuentes, logo, tono, plantillas)
        └─ Campaign ─┬─ Goal (métrica, valor inicial, objetivo, fecha)
-                    ├─ ChannelAccount (IG, YT, LinkedIn + tokens)
+                    ├─ ChannelAccount (TikTok, IG, YT, LinkedIn + tokens)
                     └─ Idea ─┬─ TrendBrief ── ReferenceVideo[]
                              ├─ FormatPlaybook
                              └─ Version[] ─┬─ Script
@@ -23,7 +23,8 @@ Tablas clave (Postgres):
 
 | Tabla | Campos clave |
 |-------|--------------|
-| `campaigns` | id, brand_id, name, industry, target_audience (jsonb), channels[], budget_eur, start_at, end_at |
+| `workspaces` | id, name, plan, byok_keys (cifradas), usage_counters, avatar_consent |
+| `campaigns` | id, workspace_id, brand_id, name, industry, target_audience (jsonb), channels[], budget_eur, start_at, end_at |
 | `goals` | id, campaign_id, metric (`followers`, `views`, `engagement_rate`, `leads`), channel, baseline, target, deadline |
 | `ideas` | id, campaign_id, prompt, topic, status |
 | `reference_videos` | id, idea_id, platform, url, author, published_at, views, likes, comments, shares, saves, duration_s, outlier_score, relevance |
