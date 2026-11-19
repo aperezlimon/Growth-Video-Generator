@@ -1,0 +1,5 @@
+# Cuentas referentes y competidores que el Trend Scout vigila siempre
+instagram: [ "@cuenta1", "@cuenta2" ]
+youtube:   [ "UCxxxxxxxx" ]
+linkedin:  [ "https://www.linkedin.com/in/creador1/" ]
+negative_keywords: [ "sorteo", "giveaway" ]

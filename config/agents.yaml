@@ -1,0 +1,13 @@
+# Modelo y límites por agente (configurable)
+defaults: { max_retries: 2, timeout_s: 600 }
+agents:
+  orchestrator:        { model: claude-opus-5-5 }
+  trend-scout:         { model: claude-sonnet-5-5, filter_model: claude-haiku-5-5, window_days: 30, top_for_analysis: 20 }
+  format-analyst:      { model: claude-opus-5-5 }
+  copywriter:          { model: claude-opus-5-5, min_versions: 10 }
+  brand-guardian:      { model: claude-sonnet-5-5, min_score: 80 }
+  video-editor:        { model: claude-sonnet-5-5 }
+  qa-evaluator:        { model: claude-opus-5-5, max_iterations: 2 }
+  viral-oracle:        { model: claude-sonnet-5-5, phase: heuristic }
+  publisher-analytics: { model: claude-haiku-5-5, snapshots: [1h, 24h, 72h, 7d] }
+  skill-curator:       { model: claude-sonnet-5-5, review_every_days: 14 }

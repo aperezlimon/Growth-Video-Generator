@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "scripts",
+  "type": "object",
+  "properties": {
+    "idea_id": {
+      "type": "string"
+    },
+    "scripts": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "version_id": {
+            "type": "string"
+          },
+          "angle": {
+            "type": "string"
+          },
+          "visual_format": {
+            "type": "string"
+          },
+          "hook_type": {
+            "type": "string"
+          },
+          "duration_s": {
+            "type": "number"
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "instagram",
+              "youtube",
+              "linkedin"
+            ]
+          },
+          "pattern_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hook": {
+            "type": "object",
+            "properties": {
+              "voiceover": {
+                "type": "string"
+              },
+              "on_screen_text": {
+                "type": "string"
+              },
+              "visual": {
+                "type": "string"
+              }
+            }
+          },
+          "beats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t_start": {
+                  "type": "number"
+                },
+                "t_end": {
+                  "type": "number"
+                },
+                "voiceover": {
+                  "type": "string"
+                },
+                "on_screen_text": {
+                  "type": "string"
+                },
+                "visual_direction": {
+                  "type": "string"
+                },
+                "audio": {
+                  "type": "string"
+                },
+                "meme_slot": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "t_start",
+                "t_end",
+                "visual_direction"
+              ]
+            }
+          },
+          "cta": {
+            "type": "string"
+          },
+          "captions": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "hashtags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "version_id",
+          "angle",
+          "visual_format",
+          "hook",
+          "beats",
+          "cta"
+        ]
+      }
+    }
+  },
+  "required": [
+    "idea_id",
+    "scripts"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "brand_review",
+  "type": "object",
+  "properties": {
+    "version_id": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "blocked": {
+      "type": "boolean"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "issue": {
+            "type": "string"
+          },
+          "fix": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "brand_directives": {
+      "type": "object",
+      "properties": {
+        "template": {
+          "type": "string"
+        },
+        "palette": {
+          "type": "string"
+        },
+        "fonts": {
+          "type": "string"
+        },
+        "subtitle_style": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "intro_outro": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "version_id",
+    "score",
+    "blocked"
+  ]
+}

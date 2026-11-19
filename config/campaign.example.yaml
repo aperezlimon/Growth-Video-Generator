@@ -1,0 +1,32 @@
+# Copia como campaign.yaml y rellena
+campaign:
+  name: "Q1 – Autoridad en ventas B2B"
+  industry: "SaaS B2B"
+  topic_pillars: ["productividad comercial", "CRM", "liderazgo de ventas"]
+  target_audience:
+    role: "Directores comerciales y CEOs de pymes"
+    country: "ES"
+    language: "es"
+    pains: ["el equipo no usa el CRM", "pipeline poco predecible"]
+    desires: ["equipo autónomo", "previsiones fiables"]
+    objections: ["no tengo tiempo", "ya lo hemos intentado"]
+  channels: [linkedin, instagram, youtube]
+  goal:                      # North Star
+    metric: followers        # followers | views | engagement_rate | leads
+    channel: linkedin
+    baseline: 1200
+    target: 10000
+    deadline: "2027-03-31"
+  secondary_goals:
+    - { metric: views, channel: instagram, target_monthly: 200000 }
+  production:
+    ideas_per_week: 3
+    versions_per_idea: 10
+    max_posts_per_channel_per_day: 2
+  budget:
+    monthly_eur: 300
+    max_cost_per_version_eur: 3
+  autonomy:                  # manual = requiere tu aprobación
+    scripts: manual
+    render: auto
+    publish: manual

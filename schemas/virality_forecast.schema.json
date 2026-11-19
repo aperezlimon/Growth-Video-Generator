@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "virality_forecast",
+  "type": "object",
+  "properties": {
+    "version_id": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "expected_views_7d": {
+      "type": "object",
+      "properties": {
+        "p10": {
+          "type": "number"
+        },
+        "p50": {
+          "type": "number"
+        },
+        "p90": {
+          "type": "number"
+        }
+      }
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "drivers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string",
+          "enum": [
+            "instagram",
+            "youtube",
+            "linkedin"
+          ]
+        },
+        "publish_at": {
+          "type": "string"
+        },
+        "trial_reel": {
+          "type": "boolean"
+        }
+      }
+    },
+    "model_phase": {
+      "enum": [
+        "heuristic",
+        "trained"
+      ]
+    }
+  },
+  "required": [
+    "version_id",
+    "score",
+    "confidence"
+  ]
+}

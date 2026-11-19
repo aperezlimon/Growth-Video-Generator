@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qa_report",
+  "type": "object",
+  "properties": {
+    "version_id": {
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "pass",
+        "revise",
+        "reject"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "technical": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "hook": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "clarity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "brand": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "pacing": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "compliance": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        }
+      }
+    },
+    "fixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timecode": {
+            "type": "string"
+          },
+          "problem": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "iteration": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "version_id",
+    "verdict",
+    "scores"
+  ]
+}

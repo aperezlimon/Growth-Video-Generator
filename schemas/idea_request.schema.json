@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "idea_request",
+  "type": "object",
+  "properties": {
+    "prompt": {
+      "type": "string"
+    },
+    "campaign_id": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "pains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "instagram",
+          "youtube",
+          "linkedin"
+        ]
+      }
+    },
+    "versions_requested": {
+      "type": "integer",
+      "minimum": 10,
+      "default": 10
+    }
+  },
+  "required": [
+    "prompt",
+    "campaign_id"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "format_playbook",
+  "type": "object",
+  "properties": {
+    "idea_id": {
+      "type": "string"
+    },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "structure",
+              "visual",
+              "typography",
+              "audio",
+              "copy",
+              "sales_angle",
+              "storytelling",
+              "engagement"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "instagram",
+                "youtube",
+                "linkedin"
+              ]
+            }
+          },
+          "impact": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "description",
+          "evidence"
+        ]
+      }
+    },
+    "hook_library": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "template": {
+            "type": "string"
+          },
+          "example": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "visual_specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "type": "string"
+          },
+          "fonts": {
+            "type": "string"
+          },
+          "subtitle_style": {
+            "type": "string"
+          },
+          "cuts_per_10s": {
+            "type": "number"
+          },
+          "palette": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "platform_rules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "do": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dont": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "recommended_duration_s": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    }
+  },
+  "required": [
+    "idea_id",
+    "patterns",
+    "hook_library"
+  ]
+}

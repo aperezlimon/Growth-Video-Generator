@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "performance_snapshot",
+  "type": "object",
+  "properties": {
+    "publication_id": {
+      "type": "string"
+    },
+    "version_id": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "instagram",
+        "youtube",
+        "linkedin"
+      ]
+    },
+    "taken_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "age": {
+      "enum": [
+        "1h",
+        "24h",
+        "72h",
+        "7d"
+      ]
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "views": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "reach": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "avg_watch_s": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "completion_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "hook_rate": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "likes": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "comments": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "shares": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "saves": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "follows": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "clicks": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "publication_id",
+    "platform",
+    "taken_at",
+    "metrics"
+  ]
+}

@@ -1,0 +1,62 @@
+# Skill Registry — estado: candidate | trial | active | under_review | deprecated | retired
+# Candidatos iniciales a validar en la Fase 2 (ver docs/04-skills-y-edicion.md)
+skills:
+  - id: remotion-templates
+    category: motion
+    type: local
+    formats: [kinetic_typography, slideshow_motion, meme_mix, animation_2d, split_screen]
+    status: candidate
+    notes: "Plantillas React de marca + skills de Remotion para agentes"
+  - id: ffmpeg-toolkit
+    category: utility
+    type: local
+    formats: [all]
+    status: candidate
+  - id: animated-captions
+    category: subtitles
+    type: local
+    formats: [all]
+    status: candidate
+  - id: auto-edit-talking-head
+    category: editing
+    type: local
+    formats: [talking_head_recorded]
+    status: candidate
+    notes: "Cortar silencios, zoom dinámico, insertar B-roll"
+  - id: manim-explainer
+    category: animation
+    type: local
+    formats: [animation_2d]
+    status: candidate
+  - id: tts-voice-clone
+    category: voice
+    type: api_wrapper
+    provider: "ElevenLabs (u otro)"
+    status: candidate
+  - id: avatar-clone
+    category: avatar
+    type: api_wrapper
+    provider: "HeyGen / Higgsfield (a comparar)"
+    formats: [talking_head_avatar]
+    status: candidate
+  - id: generative-broll
+    category: generative_video
+    type: api_wrapper
+    provider: "Higgsfield / Kling / Veo / Runway (a comparar)"
+    formats: [documentary]
+    status: candidate
+  - id: illustration-gen
+    category: image
+    type: api_wrapper
+    formats: [drawing_whiteboard, animation_2d]
+    status: candidate
+  - id: meme-library
+    category: assets
+    type: local
+    formats: [meme_mix]
+    status: candidate
+    notes: "Cada meme con licencia, fuente, riesgo y etiquetas de emoción"
+review_policy:
+  every_days: 14
+  under_review_if: { zero_usage_cycles: 2, below_percentile: 30, fatigue_drop_pct: 25 }
+  replace_if_alternative_cost_ratio: 0.5

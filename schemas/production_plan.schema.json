@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "production_plan",
+  "type": "object",
+  "properties": {
+    "idea_id": {
+      "type": "string"
+    },
+    "variant_matrix": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "version_id": {
+            "type": "string"
+          },
+          "angle": {
+            "type": "string"
+          },
+          "visual_format": {
+            "type": "string"
+          },
+          "hook_type": {
+            "type": "string"
+          },
+          "duration_s": {
+            "enum": [
+              15,
+              30,
+              45,
+              60
+            ]
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "instagram",
+              "youtube",
+              "linkedin"
+            ]
+          },
+          "cta": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "version_id",
+          "angle",
+          "visual_format",
+          "hook_type",
+          "duration_s",
+          "platform"
+        ]
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "scripts",
+          "render",
+          "publish"
+        ]
+      }
+    },
+    "budget_eur": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "idea_id",
+    "variant_matrix"
+  ]
+}

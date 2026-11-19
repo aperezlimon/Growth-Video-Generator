@@ -1,0 +1,28 @@
+brand:
+  name: "Tu Marca"
+  logo: "assets/logo.svg"
+  palette: { primary: "#111111", accent: "#FF5A1F", background: "#F7F5F0", text: "#111111" }
+  fonts:
+    headline: { family: "Inter Tight", weight: 800 }
+    body: { family: "Inter", weight: 500 }
+  subtitles:
+    style: "palabra resaltada"   # karaoke / bloque / palabra resaltada
+    highlight_color: "#FF5A1F"
+    position: "centro-bajo (fuera de zona UI)"
+  signature:                      # activos distintivos recurrentes
+    catchphrase: "Y esto no te lo cuentan."
+    sound: "assets/sfx/signature.wav"
+    intro_max_s: 0.8
+    outro: "logo + CTA 1 s"
+  voice:
+    tone: ["directo", "irónico", "experto cercano"]
+    address: "tú"
+    words_allowed: ["pipeline", "cerrar", "equipo"]
+    words_banned: ["sinergia", "disruptivo", "revolucionario"]
+    forbidden_claims: ["garantizado", "resultados en 24h"]
+  references:
+    love: []   # URLs de vídeos que te encantan
+    hate: []   # URLs de vídeos que no quieres parecerte
+  face_and_voice:
+    use_my_face: recorded         # recorded | avatar | none
+    voice_clone_consent: false

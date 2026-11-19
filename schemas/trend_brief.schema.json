@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trend_brief",
+  "type": "object",
+  "properties": {
+    "idea_id": {
+      "type": "string"
+    },
+    "window_days": {
+      "const": 30
+    },
+    "queries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string",
+            "enum": [
+              "instagram",
+              "youtube",
+              "linkedin"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "author_followers": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration_s": {
+            "type": "number"
+          },
+          "views": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "likes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "comments": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "shares": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "saves": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "outlier_score": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "relevance": {
+            "type": "number"
+          },
+          "selected_for_analysis": {
+            "type": "boolean"
+          },
+          "why": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "platform",
+          "url",
+          "published_at",
+          "relevance"
+        ]
+      }
+    }
+  },
+  "required": [
+    "idea_id",
+    "videos"
+  ]
+}
